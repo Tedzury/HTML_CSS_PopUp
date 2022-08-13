@@ -7,8 +7,6 @@
     font-family: ubuntu;
 }
 
-
-
 body {
     background-color:rgba(250, 235, 215, 0.662);    
 }
@@ -23,6 +21,7 @@ body {
 img {
     object-fit: contain;
 }
+
 .nav__list {
     background-color: rgba(177, 138, 248, 0.400);
     height: 50px;
@@ -43,7 +42,6 @@ img {
     padding-top: 5px;
     margin: 0 10px 0 10px;
     border: 2px solid transparent;  
-    
 }
 
 .nav_link {
@@ -108,7 +106,6 @@ img {
 
 .first_label:hover {
     cursor: pointer;
-
 }
 
 .first:checked + .main__wrapper {
@@ -140,7 +137,6 @@ img {
     gap: 15px 15px;
     list-style-type: none;
     padding: 0 0 0 0;
-
 }
 
 .menu__item__main, .menu__item__second__popup {
@@ -164,12 +160,18 @@ img {
     text-decoration: none;
     color:black;
     z-index: 1;
+
 }
 
 .item__icon {
     box-sizing: border-box;
     width: 65px;
     height: 65px;
+}
+
+.icon__title {
+    display: block;
+    line-height: 14px;
 }
 
 .menu__item__second__popup {
@@ -179,8 +181,8 @@ img {
 
 .second {
     width: 273px;
-    height: 45px;
-    transform: translate(-41px,-3px);
+    height: 42px;
+    transform: translate(-40px,-3px);
 }
 
 .second_label {
@@ -196,6 +198,10 @@ img {
 
 .second_label:focus {
     border:2px solid black;
+}
+
+.second:checked {
+    visibility: hidden;
 }
 
 .second_wrapper {
@@ -215,12 +221,16 @@ img {
 }
 
 @media (max-width: 455px) {
+
     .nav__list {
         height: 60px;
     }
+
     .nav__item {
         font-size: 11px;
+        line-height: 14px;
     }
+
     .nav__item:hover {
         transform: scale(1);
     }
@@ -232,17 +242,18 @@ img {
         padding-left: 5px;
         height: 300px;
         margin-top: 5px;
-        
     }
 
     .menu__list__main {
         width: 200px;
         display: grid;
         box-sizing: border-box;
-        grid-template-rows: repeat(3, 70px);
+        grid-template-rows: repeat(3, minmax(70px, 80px));
         grid-template-columns: repeat(3, 70px);
-    gap: 10px 5px;    
+        grid-auto-rows: minmax(70px, 80px);
+        gap: 10px 5px;    
     }
+
     .item_box{
         
         width: 50px;
@@ -250,21 +261,33 @@ img {
         font-size: 11px;
         line-height: 5px;
     }
+
     .item__icon {
         box-sizing: border-box;
         width: 40px;
         height: 40px;
     }
+
     .second_label {
         width: 100px;
         height: 15px;
         transform: translate(60px, 10px);
         font-size: 12px;     
     }
+
     .second {
         width: 122px;
         height: 36px;
         transform: translate(-18px, 8px);
     }
 
-}
+    .nav__item__menu{
+        margin: 0 auto;
+    }
+
+    /* .nav__item__menu:focus {
+        transform: scale(1);
+    } */
+
+}   
+
